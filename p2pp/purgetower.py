@@ -295,7 +295,9 @@ def purge_generate_sequence():
         gcode.issue_code("G91")
         gcode.issue_code("G1 Z20 F10800")
         gcode.issue_code("G90")
+        gcode.issue_code("M83 ; relative processing")
         gcode.issue_code("M25")
+
 
     gcode.issue_code("G1 Z{:.2f} F10800".format((v.purgelayer + 1) * v.layer_height))
 
