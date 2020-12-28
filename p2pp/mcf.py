@@ -381,7 +381,7 @@ def gcode_parselines():
 
             if g[gcode.COMMAND].startswith('T'):
 
-                if not v.side_wipe and not v.full_purge_reduction and not v.tower_delta:
+                if not v.side_wipe and not v.full_purge_reduction and not v.tower_delta and v.pausecount >0:
                     if v.manual_filament_swap:
                         gcode.issue_code("G91")
                         gcode.issue_code("G1 Z20 F10800")
@@ -389,6 +389,7 @@ def gcode_parselines():
                         gcode.issue_code("G1 Z-20 F10800")
                         gcode.issue_code("G90")
                         gcode.issue_code("M83 ; relative processing")
+                    v.pausecount +=1
 
                 ct = v.current_tool
                 gcode_process_toolchange(int(g[gcode.COMMAND][1:]))
