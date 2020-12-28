@@ -42,7 +42,7 @@ releaseinfo = {
     "5.22.0": "corrected tower delta",
     "5.23.0": "better tower detection",
     "6.6.0":  "manual filament swap",
-    "6.6.1":  "added (M83 ; relative processing) after each pause"
+    "6.6.1":  "added (M83 ; relative processing) after each pause",
     '--- RELEASE INFORMATION': 'END'
 }
 
