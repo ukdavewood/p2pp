@@ -381,7 +381,7 @@ def gcode_parselines():
 
             if g[gcode.COMMAND].startswith('T'):
 
-                if not v.side_wipe and not v.full_purge_reduction and not v.tower_delta and v.current_tool == -1:
+                if not v.side_wipe and not v.full_purge_reduction and not v.tower_delta:
                     if v.manual_filament_swap:
                         gcode.issue_code("G91")
                         gcode.issue_code("G1 Z20 F10800")
