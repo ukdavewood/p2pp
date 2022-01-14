@@ -8,7 +8,7 @@ See relevent branches for details
 
 Demo results
 
-Palette4_Palette4  -  Feeding spliced back into the Palette2 so that it can produce 7 colours
+Palette4_Palette3  -  Feeding spliced back into the Palette2 so that it can produce 7 colours
 
 ![7 Colour Demo](https://github.com/ukdavewood/p2pp/blob/Palette4_Palette3/Demos/Palette4_Palette3/Second%20Attempt.JPG?raw=true)
 
