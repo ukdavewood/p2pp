@@ -1,0 +1,4 @@
+Users/davidwood/python/Idex_Sparse_Z_Adjust.py; ;
+/Users/davidwood/python/Idex_pre.py;     
+open -W -a P2PP.app --args;   
+/Users/davidwood/python/Idex_post.py;        

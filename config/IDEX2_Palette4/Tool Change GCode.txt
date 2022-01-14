@@ -1,0 +1,17 @@
+; TOOL CHANGE ---START---
+; next_extruder [next_extruder]
+
+{if next_extruder == 4}
+;IDEX_START_IGNORE
+;IDEX_ADD:T1
+;IDEX_ADD_G1_Z:  Add back in last G1 Z removed by P2PP.
+
+{elsif previous_extruder == 4}
+;IDEX_ADD:T0
+;IDEX_END_IGNORE
+{endif}
+
+;IDEX_SPARSE_Z_ADJUST=-0.1
+
+; TOOL CHANGE ---END---
+
