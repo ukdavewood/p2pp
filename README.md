@@ -3,6 +3,7 @@
 ## Fork of P2PP for some Proof of Concepts by Dave Wood
 
 See issues for more details, but the main objective is to allow Palette2 to take full advantage of both extruders on IDEX printers.
+
 I have been liaising with tomvandeneede and is considering including some of the functionality in the base P2PP product.
 
 
