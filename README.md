@@ -1,5 +1,11 @@
 # p2pp - **Palette2 Post Processing tool for PrusaSlicer/Slic3r PE**
 
+## Fork of P2PP for some Proof of Concepts by Dave Wood
+
+See issues for more details, but the main objective is to allow Palette2 to take full advantage of both extruders on IDEX printers.
+
+
+
 ## Getting strarted
 
 Have a look at the [P2PP Wiki pages](https://github.com/tomvandeneede/p2pp/wiki/Home-%5BP2-P3%5D) to get youstarted.
