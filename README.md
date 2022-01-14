@@ -8,9 +8,9 @@ See relevent branches for details
 
 Demo results
 
-IDEX2_Palette4  -  Using Palette on one extruder of an IDEX printer - to allow for 5 colours or multi material
+Palette4_Palette4  -  Feeding spliced back into the Palette2 so that it can produce 7 colours
 
-![5 Colour Demo](https://github.com/ukdavewood/p2pp/blob/Palette4_Palette3/Demos/IDEX2_Palette4/IDEX2_Palette4%20Demo.JPG?raw=true)
+![7 Colour Demo](https://github.com/ukdavewood/p2pp/blob/Palette4_Palette3/Demos/Palette4_Palette3/Second%20Attempt.JPG?raw=true)
 
 
 
