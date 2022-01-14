@@ -1,0 +1,200 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2636
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red0\green0\blue255;\red11\green11\blue11;
+\red160\green11\blue25;\red33\green30\blue99;\red231\green169\blue17;\red31\green122\blue51;\red216\green72\blue16;
+\red235\green235\blue235;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c0\c0\c100000;\cssrgb\c4706\c4706\c4706;
+\cssrgb\c69804\c11373\c12549;\cssrgb\c17255\c17647\c46275;\cssrgb\c92941\c71373\c6275;\cssrgb\c13333\c54118\c25882;\cssrgb\c88627\c36863\c6275;
+\cssrgb\c93725\c93725\c93725;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs36 \cf0 \expnd0\expndtw0\kerning0
+Standard P2PP output without my two scripts for comparison
+\fs24 \
+-----------------------------------------\
+P2PP Version: 8.00.17\
+Python Version: 3.9.1\
+Platform: darwin\
+\
+Reading File /var/folders/9d/4zy86gq52td4vl5xyh88d3c80000gn/T/.36337.gcode.pp\
+Analyzing Prusa Slicer Configuration\
+Extra filament at end of print 170.00mm\
+Linear Ping interval of 350.00mm\
+SPLICE OFFSET: 80.00mm\
+Minimal ilament length 1300.00mm\
+Saving unpocessed code to: /var/folders/9d/4zy86gq52td4vl5xyh88d3c80000gn/T/.36337.gcode_unprocessed.pp\
+GCode Analysis ... Pass 1\
+Tower detected from (172.478, 38.80800000000001) to (285.12, 162.0)\
+Gcode Analysis ... Pass 2\
+Processing time 0.33s\
+Generating GCODE file: (temp location, PS will move) /var/folders/9d/4zy86gq52td4vl5xyh88d3c80000gn/T/.36337.gcode.pp\
+\
+\pard\pardeftab720\partightenfactor0
+\cf3 ----------------------------------------\cf0 \
+\cf3 Print Summary\cf0 \
+\cf3 ----------------------------------------\cf0 \
+\
+Number of splices: 14\
+Number of pings: 13\
+Total print length 5035.90mm\
+\
+Inputs/Materials used:\
+----------------------\
+Input 1 2307.58mm - PETG \cf4 [######]\cf0  Black Artist_D_Generic_PETG_V4 \
+Input 2 436.57mm - PETG \cf5 [######]\cf0  FireBrick Artist_D_Generic_PETG_V4 \
+Input 3 430.55mm - PETG \cf6 [######]\cf0  MidnightBlue Artist_D_Generic_PETG_V4 \
+Input 4 397.56mm - PETG \cf7 [######]\cf0  Orange Artist_D_Generic_PETG_V4 \
+Input 5 653.43mm - PETG \cf8 [######]\cf0  Peru Artist_D_Generic_PETG_V4 \
+Input 6 411.34mm - PETG \cf9 [######]\cf0  Chocolate Artist_D_Generic_PETG_V4 \
+Input 7 398.87mm - PETG \cf10 [######]\cf0  PaleTurquoise Artist_D_Generic_PETG_V4 \
+\
+Splice Information:\
+-------------------\
+Splice Offset = 80.00mm\
+Autoloading Offset = 0.00mm\
+0001 Input: 1 Location: 0.00mm length 410.76mm\
+0002 Input: 2 Location: 410.76mm length 206.17mm\
+0003 Input: 3 Location: 616.93mm length 216.81mm\
+0004 Input: 4 Location: 833.74mm length 203.58mm\
+0005 Input: 5 Location: 1037.32mm length 305.93mm\
+0006 Input: 6 Location: 1343.24mm length 209.15mm\
+0007 Input: 7 Location: 1552.39mm length 398.87mm\
+0008 Input: 1 Location: 1951.26mm length 653.16mm\
+0009 Input: 2 Location: 2604.41mm length 230.40mm\
+0010 Input: 3 Location: 2834.81mm length 213.74mm\
+0011 Input: 4 Location: 3048.56mm length 193.98mm\
+0012 Input: 5 Location: 3242.54mm length 347.51mm\
+0013 Input: 6 Location: 3590.04mm length 202.19mm\
+0014 Input: 1 Location: 3792.24mm length 1323.66mm\
+\
+Ping Information:\
+-----------------\
+Ping 0001 at 350.27mm\
+Ping 0002 at 706.83mm\
+Ping 0003 at 1058.93mm\
+Ping 0004 at 1412.68mm\
+Ping 0005 at 1763.62mm\
+Ping 0006 at 2114.46mm\
+Ping 0007 at 2464.50mm\
+Ping 0008 at 2815.73mm\
+Ping 0009 at 3172.95mm\
+Ping 0010 at 3528.87mm\
+Ping 0011 at 3879.12mm\
+Ping 0012 at 4230.36mm\
+Ping 0013 at 4580.60mm\
+\
+\
+\
+\pard\pardeftab720\partightenfactor0
+
+\fs36 \cf0 P2PP Output from my 1st pass. -  With T6-T3 remapped to T3-T0
+\fs24 \
+------------------------------------------------------------------------------------\
+\
+P2PP Version: 8.00.17\
+Python Version: 3.9.1\
+Platform: darwin\
+\
+Reading File /var/folders/9d/4zy86gq52td4vl5xyh88d3c80000gn/T/.36337.gcode.pp\
+Analyzing Prusa Slicer Configuration\
+Extra filament at end of print 170.00mm\
+Linear Ping interval of 3500.00mm. << Pushed Ping interval in first pass right up - not sure if that is the right thing to do.\
+Config: Palette2 Accessory Mode Selected\
+SPLICE OFFSET: 80.00mm\
+Minimal ilament length 1300.00mm\
+Saving unpocessed code to: /var/folders/9d/4zy86gq52td4vl5xyh88d3c80000gn/T/.36337.gcode_unprocessed.pp\
+GCode Analysis ... Pass 1\
+Tower detected from (174.97400000000002, 45.1291) to (282.62399999999997, 109.179)\
+Gcode Analysis ... Pass 2\
+Generating GCODE file: (temp location, PS will move) /var/folders/9d/4zy86gq52td4vl5xyh88d3c80000gn/T/.36337.gcode.pp\
+Generating PALETTE MAF/MSF file: /Users/Shared/stl2/artistd 0.6 Dual E2 7xP2PP v1_0.3mm_PETG__59m.mcf.maf\
+\
+\pard\pardeftab720\partightenfactor0
+\cf3 ----------------------------------------\cf0 \
+\cf3 Print Summary\cf0 \
+\cf3 ----------------------------------------\cf0 \
+\
+Number of splices: 7\
+Number of pings: 0\
+Total print length 2030.70mm\
+\
+Inputs/Materials used:\
+----------------------\
+Input 1 397.06mm - PETG \cf7 [######]\cf0  Orange Artist_D_Generic_PETG_V4\
+Input 2 653.43mm - PETG \cf8 [######]\cf0  Peru Artist_D_Generic_PETG_V4\
+Input 3 581.34mm - PETG \cf9 [######]\cf0  Chocolate Artist_D_Generic_PETG_V4. << Input 3 longer than standard input 6 due to 170mm extra filament at end of print\
+Input 4 398.87mm - PETG \cf10 [######]\cf0  PaleTurquoise Artist_D_Generic_PETG_V4\
+\
+\pard\pardeftab720\partightenfactor0
+
+\fs28 \cf0 Output from 2nd pass. - which just folds T6-T3 all in to T3.
+\fs24 \
+------------------------------------------------------------------------------\
+\
+P2PP Version: 8.00.17\
+Python Version: 3.9.1\
+Platform: darwin\
+\
+Reading File /var/folders/9d/4zy86gq52td4vl5xyh88d3c80000gn/T/.36337.gcode.pp\
+Analyzing Prusa Slicer Configuration\
+Extra filament at end of print 170.00mm\
+Linear Ping interval of 350.00mm\
+SPLICE OFFSET: 80.00mm\
+Minimal ilament length 1300.00mm\
+Saving unpocessed code to: /var/folders/9d/4zy86gq52td4vl5xyh88d3c80000gn/T/.36337.gcode_unprocessed.pp\
+GCode Analysis ... Pass 1\
+Tower detected from (172.478, 38.80800000000001) to (285.12, 162.0)\
+Gcode Analysis ... Pass 2\
+Processing time 0.32s\
+Generating GCODE file: (temp location, PS will move) /var/folders/9d/4zy86gq52td4vl5xyh88d3c80000gn/T/.36337.gcode.pp\
+\
+\pard\pardeftab720\partightenfactor0
+\cf3 ----------------------------------------\cf0 \
+\cf3 Print Summary\cf0 \
+\cf3 ----------------------------------------\cf0 \
+\
+Number of splices: 9\
+Number of pings: 13\
+Total print length 5035.90mm\
+\
+Inputs/Materials used:\
+----------------------\
+Input 1 2307.58mm - PETG \cf4 [######]\cf0  Black Artist_D_Generic_PETG_V4\
+Input 2 436.57mm - PETG \cf5 [######]\cf0  FireBrick Artist_D_Generic_PETG_V4\
+Input 3 430.55mm - PETG \cf6 [######]\cf0  MidnightBlue Artist_D_Generic_PETG_V4\
+Input 4 1861.20mm - PETG \cf7 [######]\cf0  Orange Artist_D_Generic_PETG_V4\
+\
+Splice Information:\
+-------------------\
+Splice Offset = 80.00mm\
+Autoloading Offset = 0.00mm\
+0001 Input: 1 Location: 0.00mm length 410.76mm\
+0002 Input: 2 Location: 410.76mm length 206.17mm\
+0003 Input: 3 Location: 616.93mm length 216.81mm\
+0004 Input: 4 Location: 833.74mm length 1117.52mm\
+0005 Input: 1 Location: 1951.26mm length 653.16mm\
+0006 Input: 2 Location: 2604.41mm length 230.40mm\
+0007 Input: 3 Location: 2834.81mm length 213.74mm\
+0008 Input: 4 Location: 3048.56mm length 743.68mm\
+0009 Input: 1 Location: 3792.24mm length 1323.66mm\
+\
+Ping Information:\
+-----------------\
+Ping 0001 at 350.27mm\
+Ping 0002 at 706.83mm\
+Ping 0003 at 1058.93mm\
+Ping 0004 at 1412.68mm\
+Ping 0005 at 1763.62mm\
+Ping 0006 at 2114.46mm\
+Ping 0007 at 2464.50mm\
+Ping 0008 at 2815.73mm\
+Ping 0009 at 3172.95mm\
+Ping 0010 at 3528.87mm\
+Ping 0011 at 3879.12mm\
+Ping 0012 at 4230.36mm\
+Ping 0013 at 4580.60mm\
+\
+\
+}

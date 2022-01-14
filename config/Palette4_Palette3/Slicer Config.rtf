@@ -1,0 +1,84 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2636
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Print Settings, output, Post Processing\
+\
+/Users/shared/python/Idex_pre.pass1.py;             \
+open -W -a P2PP.app --args;    \
+;/Users/shared/python/Idex_pre.pass2.py;            \
+;open -W -a P2PP.app --args; ;\
+\
+\
+Printer - Custom GCode - Start GCode\
+\
+;P2PP PRINTERPROFILE=xxxxxxxxxxxxxxxx\
+\
+;P2PP EXTRAENDFILAMENT=270\
+\
+;IDEX_PASS1_ADD:;P2PP LINEARPINGLENGTH=3500\
+\
+\
+;P2PP LINEARPINGLENGTH=350\
+\
+\
+;PASS1P2PP ACCESSORYMODE_MAF\
+\
+; Pass1 - change Ping to be very long, introduce accessory mode, plus point to dummy printer, to. a) Stop the risk over overwriting values and b the Have a very long output tube\
+;IDEX_PASS1_START_GCODE_REPL:LINEARPINGLENGTH=350>LINEARPINGLENGTH=3500,PASS1P2PP>P2PP,PRINTERPROFILE= xxxxxxxxxxxxxxxx>PRINTERPROFILE=yyyyyyyyyyyyyyyy\
+\
+\
+\
+;P2PP SPLICEOFFSET=80\
+;P2PP P3_MINIMALTOTALFILAMENT=1300\
+ \
+\
+;P2PP MATERIAL_DEFAULT_0_0_0\
+;P2PP MATERIAL_PVA_PVA_0_0_0\
+;P2PP MATERIAL_PVA_PLA_0_0_0\
+;P2PP MATERIAL_PLA_PLA_0_0_0\
+;P2PP MATERIAL_PET_PET_0_0_0\
+;P2PP MATERIAL_PETG_PETG_0_0_0\
+\
+;P2PP CONSOLEWAIT\
+;P2PP SAVEUNPROCESSED\
+\
+\
+\{if first_layer_height != layer_height\}\
+;IDEX_SPARSE_Z_ADJUST=\{first_layer_height - layer_height\}\
+\{endif\}\
+\
+; For the first pass virtual Extuders 4-7 are all shifted to 1-4 for creation of an offline strip of 4 colour filament\
+;IDEX_PASS1_TRANSLATE:T3=T0,T4=T1,T5=T2,T6=T3\
+; For the second pass extruders 4-7 are all shifted to 4 which will contain to 4 colour filament\
+;IDEX_PASS2_TRANSLATE:T6=T3,T5=T3,T4=T3\
+;IDEX_PASS1_SWAPAROUND1:filament_settings_id,extruder_colour,filament_colour,filament_diameter,filament_type,first_layer_bed_temperature,first_layer_temperature,retract_length,retract_lift\
+;IDEX_PASS2_MULTICOLOUR=T3\
+\
+\
+End GCode\
+\
+;IDEX_END_IGNORE_PASS1\
+\
+\
+Tool Change GCode\
+\
+; TOOL CHANGE ---START---\
+; next_extruder [next_extruder]\
+\
+\{if next_extruder < 3\}\
+;IDEX_START_IGNORE_PASS1\
+;IDEX_ADD_G1_Z:  Add back in last G1 Z removed by P2PP.\
+\
+\{elsif previous_extruder < 3\}\
+;IDEX_END_IGNORE_PASS1\
+\{endif\}\
+\
+; TOOL CHANGE ---END---\
+\
+\
+\
+}
