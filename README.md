@@ -1,5 +1,19 @@
 # p2pp - **Palette2 Post Processing tool for PrusaSlicer/Slic3r PE**
 
+## Fork Details
+
+Temporary fork created by Dave Wood - to manage some POC ideas relating to Palette2 when using P2PP
+
+See relevent branches for details
+
+Demo results
+
+IDEX2_Palette4  -  Using Palette on one extruder of an IDEX printer - to allow for 5 colours or multi material
+
+![5 Colour Demo](Demos/IDEX2_Palette4/IDEX2_Palette4 Demo.JPG)
+
+
+
 ## Getting strarted
 
 Have a look at the [P2PP Wiki pages](https://github.com/tomvandeneede/p2pp/wiki/Home-%5BP2-P3%5D) to get youstarted.
