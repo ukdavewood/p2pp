@@ -20,7 +20,7 @@ os.rename(sourceFile,sourceFile+".preCol.bak")
 
 
 outname = os.environ["SLIC3R_PP_OUTPUT_NAME"]
-mafFile = outname.replace(".gcode",".mcf.maf")
+mafFile = outname.replace(".mcf.gcode",".mcf.maf")
 print(mafFile)
 
 # ;P2PP ACCESSORYMODE_MAF
