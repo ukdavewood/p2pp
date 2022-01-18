@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 
 # V2 - removed G1 Z from ignore list - to overcome P2PP Z correction problem
+# Based on example from Bobs Notebook. - https://projects.ttlexceeded.com/3dprinting_prusaslicer_post-processing.html
+
 
 
 import sys

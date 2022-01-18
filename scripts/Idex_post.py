@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 
+# Based on example from Bobs Notebook. - https://projects.ttlexceeded.com/3dprinting_prusaslicer_post-processing.html
+
 import sys
 import re
 import os

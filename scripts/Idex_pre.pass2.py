@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 # V1  - Initial creation
+# Based on example from Bobs Notebook. - https://projects.ttlexceeded.com/3dprinting_prusaslicer_post-processing.html
 
 
 

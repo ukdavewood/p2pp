@@ -3,6 +3,7 @@
 # V2 - removed G1 Z from ignore list - to overcome P2PP Z correction problem
 # V3 - Added Pass1 logic -
 #  Note there may still need to be some work related to SPLICEOFFSET - as it seems to be added on
+# Based on example from Bobs Notebook. - https://projects.ttlexceeded.com/3dprinting_prusaslicer_post-processing.html
 
 
 

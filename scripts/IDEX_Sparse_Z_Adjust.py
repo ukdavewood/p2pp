@@ -4,6 +4,10 @@
 #  This post processor reacts to a directive in the Tool Change Gcode and introduces an adjustment to the Z height before
 #   The Wipe tower layers are drawn
 
+# Based on example from Bobs Notebook. - https://projects.ttlexceeded.com/3dprinting_prusaslicer_post-processing.html
+
+
+
 import sys
 import re
 import os
