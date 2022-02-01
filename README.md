@@ -2,9 +2,19 @@
 
 ## Fork Details
 
-Temporary fork created by Dave Wood - to manage some POC ideas relating to Palette2 when using P2PP
+Fork created by Dave Wood - to manage some additional colour POC ideas relating to Palette2 when using P2PP
 
-See relevent branches for details
+The following demos are included:
+
+1. Virtual Colours
+
+    Works best on top surfaces - using transparent PETG stack colours to create new colours
+    Yellow on top of Blue, giving green.  Orange on top of Blue giving Brown.
+    
+    This demo used fusion 360 to create the thin layers
+    
+    ![Virtual Colour Demo](https://github.com/ukdavewood/p2pp/blob/Palette4_Palette3/Demos/Palette4_Palette3/Second%20Attempt.JPG?raw=true)
+    
 
 Demo results
 
