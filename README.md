@@ -63,13 +63,14 @@ At top of model thin layers need to be manually created for the overlay colours.
 ## Palette 2 on IDEX printer Instructions
 
 
-1. Download scripts from [here](https://github.com/ukdavewood/p2pp/tree/colour/scripts) into a python folder in your home directory
+1. Download scripts from [here](https://github.com/ukdavewood/p2pp/tree/colour/scripts) into a suitable python folder /User/Shared/python for example on a Mac.
 
 2. Add scripts before and after P2PP in the Print/Output/Post-Processing scripts in PrusaSlicer
-/Users/<name>/python/Idex_Sparse_Z_Adjust.py; ;    
-/Users/<name>/python/Idex_pre.py;     
+
+/Users/Shared/python/Idex_Sparse_Z_Adjust.py; ;    
+/Users/Shared/python/Idex_pre.py;     
 open -W -a P2PP.app --args;   
-/Users/<name>/python/Idex_post.py;      
+/Users/Shared/python/Idex_post.py;      
 
     NB/ First script required if using Sparse Purge Towers
     
