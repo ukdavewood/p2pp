@@ -19,7 +19,7 @@ The following demos are included:
 
 2. Palette 2 on IDEX printer
 
-    Adding an addional colour or material to Palette 2 using the 2nd extruder of an IDEX printer.
+    Adding an additional colour or material to Palette 2 using the 2nd extruder of an IDEX printer.
     
     This demo requires P2PP, and also needs some scripts to hide the 2nd extruder GCODE from P2PP befores its processing, then another script to add the hidden GCODE back into the Palette2 files prior to printing. 
     
@@ -36,11 +36,11 @@ The following demos are included:
     Using this method an additional 3 colours can be added per additional pass.
     
     During the first pass a 4 colour filament is created using accessory mode.
-    During the second printing pass 3 the pre-spliced filament is refed back into one of the Palette2 channels, together with 3 additional colours.
+    During the second printing pass the pre-spliced filament is fed back into one of the Palette2 channels, together with 3 additional colours.
     
     The demo requires P2PP supported by some scripts.
     
-    Only really suitable for fairly small uncomplicated runs due to the fact that a lot of purge is required to be added on the first pass in order to overcome feed rate changes that pinging may cause in the 2nd printer phase.
+    Only really suitable for fairly small uncomplicated models as a fair bit of purge is required to be added on the first pass in order to overcome feed rate changes that pinging may cause in the 2nd printer phase.
     
     
     ![Palette 2 7 Colour Demos](https://github.com/ukdavewood/p2pp/blob/colour/Demos/Palette4_Palette3/P4P3%20Colours.JPG?raw=true)
@@ -52,7 +52,11 @@ The following demos are included:
     
     
 
-## Virtual Colours
+## Virtual Colours instructions
+
+See example STLs - [Example](https://github.com/ukdavewood/p2pp/tree/colour/Demos/Palette2%20Virtual%20Colours/Tortoise%20virtual4)
+
+At top of model thin layers need to be manually created for the overlay colours.
 
 
 
