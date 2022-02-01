@@ -63,6 +63,13 @@ print("FC:",filament_colour)
 print("EC:",extruder_colour)
 print("FSI:",filament_settings_id)
 
+for i in range(len(filament_settings_id)):
+    if len(filament_settings_id[i]) > 25:
+        filament_settings_id[i] = filament_settings_id[i][0:44]
+
+        
+        
+
 #            omega_str += " D{}{}{}{}".format(v.used_filament_types.index(v.filament_type[i]) + 1,
 #                                             v.filament_color_code[i].strip("\n"),
 #                                             find_nearest_colour(v.filament_color_code[i].strip("\n")),
@@ -73,7 +80,7 @@ print("FSI:",filament_settings_id)
 
 if AccessoryMode == "":
     O25patched = False
-    with open(destFile, "w") as of:
+    with open(destFile, "w", newline='\r\n') as of:
         for lIndex in range(len(lines)):
             oline = lines[lIndex]
             # Parse gcode line
@@ -117,7 +124,7 @@ else:
     
 
     O25patched = False
-    with open(mafFile, "w") as mof:
+    with open(mafFile, "w", newline='\r\n') as mof:
         for lIndex in range(len(maflines)):
             oline = maflines[lIndex]
             # Parse gcode line
@@ -144,7 +151,7 @@ else:
     
     
 
-    with open(destFile, "w") as of:
+    with open(destFile, "w", newline='\r\n') as of:
         for lIndex in range(len(lines)):
             oline = lines[lIndex]
             # Parse gcode line
