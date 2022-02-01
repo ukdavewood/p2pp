@@ -74,7 +74,7 @@ open -W -a P2PP.app --args;
 /Users/Shared/python/Idex_post.py; 
 ```     
 
-    NB/ First script required if using Sparse Purge Towers
+NB/ First script required if using Sparse Purge Towers
     
 3.  Change Printer settings from 4 to 5 virtual extruders - with No 5 being mapped to extruder 2 on the IDEX printer
 
@@ -123,7 +123,7 @@ open -W -a P2PP.app --args;
 open -W -a P2PP.app --args; 
 ```
 
-NB/ In this example there is an additional pass at the front to show all 7 colours unaltered - the first 3 lines can be renmoved if required
+NB/ In this example there is an additional pass at the front to show all 7 colours unaltered - the first 3 lines can be removed if not required
 
 3. Tool Changing GCode in Printer/CUstom G-Code - 
 
