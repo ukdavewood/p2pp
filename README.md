@@ -106,13 +106,91 @@ Using these parameters the Idex_pre script comments out all records relating to 
 ## Double processing of filament through P2
 
 
+NB/ This method is fairly experimental - 
+
+1. Download scripts from [here](https://github.com/ukdavewood/p2pp/tree/colour/scripts) into a suitable python folder /User/Shared/python for example on a Mac.
+
+2. Add scripts before and after P2PP in the Print/Output/Post-Processing scripts in PrusaSlicer
+
+```
+/Users/shared/idex/backup_gcode.py;
+open -W -a P2PP.app --args;    
+/Users/shared/idex//restore_gcode.py;
+
+/Users/shared/idex/Idex_pre.pass1.py;           
+open -W -a P2PP.app --args;        
+/Users/shared/idex/Idex_pre.pass2.py;            
+open -W -a P2PP.app --args; 
+```
+
+NB/ In this example there is an additional pass at the front to show all 7 colours unaltered - the first 3 lines can be renmoved if required
+
+3. Tool Changing GCode in Printer/CUstom G-Code - 
+
+```
+
+; TOOL CHANGE ---START---
+; next_extruder [next_extruder]
+
+{if next_extruder < 3}
+;IDEX_START_IGNORE_PASS1
+;IDEX_ADD_G1_Z:  Add back in last G1 Z removed by P2PP.
+
+{elsif previous_extruder < 3}
+;IDEX_END_IGNORE_PASS1
+{endif}
+
+; TOOL CHANGE ---END---
+
+```
+
+4. On End G-Code section - add this to the beginning
+
+```
+;IDEX_END_IGNORE_PASS1
+```
+
+5. Add lines similar to these to the end of the Start G-Code
+
+```
+;PASS1P2PP ACCESSORYMODE_MAF
+
+;IDEX_PASS1_START_GCODE_REPL:LINEARPINGLENGTH=350>LINEARPINGLENGTH=3500,PASS1P2PP>P2PP,SPLICEOFFSET=50>SPLICEOFFSET=0
+
+
+; For the first pass virtual Extuders 4-7 are all shifted to 1-4 for creation of an offline strip of 4 colour filament
+;IDEX_PASS1_TRANSLATE:T3=T0,T4=T1,T5=T2,T6=T3
+; For the second pass extruders 4-7 are all shifted to 4 which will contain to 4 colour filament
+;IDEX_PASS2_TRANSLATE:T6=T3,T5=T3,T4=T3
+;IDEX_PASS1_SWAPAROUND1:filament_settings_id,extruder_colour,filament_colour,filament_diameter,filament_type,first_layer_bed_temperature,first_layer_temperature,retract_length,retract_lift
+
+```
+
+6.  Then export GCode, which will run P2PP 3 times - once for reference, 
+    Once to create an accessory mode file - which should be placed on an SD card and processed on the Palette2.
+    Then finally the 7 colour print can be done with the output file from the 3rd pass.
+    
+    
+
 
 ## Colour Filament Management
 
+1. Download scripts from [here](https://github.com/ukdavewood/p2pp/tree/colour/scripts) into a suitable python folder /User/Shared/python for example on a Mac.
+
+
+2. Add scripts after P2PP in the Print/Output/Post-Processing scripts in PrusaSlicer
+
+```
+open -W -a P2PP.app --args;
+/Users/Shared/Idex/Idex_P2PP_postColour.py
+```
+
+This script will update the O25 records in the P2PP output file with filament names if colour overrides are not in place
 
 
 
-## Getting strarted
+
+## P2PP Base Getting strarted
 
 Have a look at the [P2PP Wiki pages](https://github.com/tomvandeneede/p2pp/wiki/Home-%5BP2-P3%5D) to get youstarted.
 
