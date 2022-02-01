@@ -67,19 +67,19 @@ At top of model thin layers need to be manually created for the overlay colours.
 
 2. Add scripts before and after P2PP in the Print/Output/Post-Processing scripts in PrusaSlicer
 
-/Users/Shared/python/Idex_Sparse_Z_Adjust.py; ;    
+'''/Users/Shared/python/Idex_Sparse_Z_Adjust.py; ;    
 /Users/Shared/python/Idex_pre.py;     
 open -W -a P2PP.app --args;   
-/Users/Shared/python/Idex_post.py;      
+/Users/Shared/python/Idex_post.py; '''     
 
     NB/ First script required if using Sparse Purge Towers
     
 3.  Change Printer settings from 4 to 5 virtual extruders - with No 5 being mapped to extruder 2 on the IDEX printer
 
 4.  Change Tool changing GCode Printer/Custom G-code to something along the lines of this 
-NB/. Extuder numbers 0-3 would be palette on physical extruder 1,  and 4 going to physical extruder 2.
+NB/. Extuder numbers 0-3 would be palette on physical extruder 1,  and 4 going to physical extruder 2. 
 
-NB/ This assumes Palette is on extruder 1 - with 
+
 ; TOOL CHANGE ---START---
 ; next_extruder [next_extruder]
 
