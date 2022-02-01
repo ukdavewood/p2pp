@@ -60,7 +60,44 @@ At top of model thin layers need to be manually created for the overlay colours.
 
 
 
-## Palette 2 on IDEX printer
+## Palette 2 on IDEX printer Instructions
+
+
+1. Download scripts from [here](https://github.com/ukdavewood/p2pp/tree/colour/scripts) into a python folder in your home directory
+
+2. Add scripts before and after P2PP in the Print/Output/Post-Processing scripts in PrusaSlicer
+/Users/<name>/python/Idex_Sparse_Z_Adjust.py; ;    
+/Users/<name>/python/Idex_pre.py;     
+open -W -a P2PP.app --args;   
+/Users/<name>/python/Idex_post.py;      
+
+    NB/ First script required if using Sparse Purge Towers
+    
+3.  Change Printer settings from 4 to 5 virtual extruders - with No 5 being mapped to extruder 2 on the IDEX printer
+
+4.  Change Tool changing GCode Printer/Custom G-code to something along the lines of this 
+NB/. Extuder numbers 0-3 would be palette on physical extruder 1,  and 4 going to physical extruder 2.
+
+NB/ This assumes Palette is on extruder 1 - with 
+; TOOL CHANGE ---START---
+; next_extruder [next_extruder]
+
+{if next_extruder == 4}
+;IDEX_START_IGNORE
+;IDEX_ADD:T1
+;IDEX_ADD_G1_Z:  Add back in last G1 Z removed by P2PP.
+
+{elsif previous_extruder == 4}
+;IDEX_ADD:T0
+;IDEX_END_IGNORE
+{endif}
+
+;IDEX_SPARSE_Z_ADJUST=-0.1
+
+; TOOL CHANGE ---END---
+
+Using these parameters the Idex_pre script comments out all records relating to virtual extruder 4 prior to P2PP, the Idex_post then adds the commented out records back in.
+
 
 
 ## Double processing of filament through P2
